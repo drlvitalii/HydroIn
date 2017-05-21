@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="513.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <GridPane prefHeight="526.0" prefWidth="519.0" style="-fx-background-color: pink; -fx-border-color: red;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="161.0" minHeight="10.0" prefHeight="161.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="167.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="209.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label contentDisplay="CENTER" style="-fx-font-weight: bold;" text="Мощность (квт)">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Label>
+                  <TextField fx:id="powerTxt" alignment="CENTER" onKeyReleased="#setRateTxt" prefHeight="25.0" prefWidth="116.0" promptText="50" style="-fx-border-color: green; -fx-font-weight: bold;" GridPane.hgrow="NEVER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="120.0" right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="19.0" prefWidth="88.0" style="-fx-font-weight: bold;" text="Расход (кг/ч)" GridPane.columnIndex="1">
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: bold;" text="Разница температур ( С)" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="deltaTxt" alignment="CENTER" onKeyReleased="#setRateTxt" style="-fx-border-color: green;" text="15" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="180.0" right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <ImageView fitHeight="76.0" fitWidth="137.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <image>
+                        <Image url="@../resources/logo.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="80.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <TextField fx:id="rateTxt" alignment="CENTER" disable="true" editable="false" style="-fx-border-color: red; -fx-font-weight: bold; -fx-opacity: 0.8;" GridPane.columnIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="120.0" right="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+            </GridPane>
+            <GridPane prefHeight="167.0" prefWidth="466.0" GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="247.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.0" minWidth="10.0" prefWidth="256.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <TextArea prefHeight="200.0" prefWidth="200.0" />
+                  <GridPane alignment="CENTER" prefHeight="116.0" prefWidth="147.0" style="-fx-background-color: pink;">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="koefTxt" alignment="CENTER" disable="true" editable="false" style="-fx-border-color: orange; -fx-font-weight: bold; -fx-opacity: 0.8;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets bottom="10.0" right="50.0" top="5.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <RadioButton mnemonicParsing="false" onAction="#onPipeTypeRadioClick" onMouseDragEntered="#setKoefTxt" selected="true" text="Сталь" userData="steel" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="pipeTypeGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" onAction="#onPipeTypeRadioClick" text="Медь" toggleGroup="$pipeTypeGroup" userData="cuprum" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </RadioButton>
+                        <RadioButton mnemonicParsing="false" onAction="#onPipeTypeRadioClick" onMouseDragEntered="#setKoefTxt" text="ППР" toggleGroup="$pipeTypeGroup" userData="ppr" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </RadioButton>
+                        <Label prefHeight="17.0" prefWidth="85.0" style="-fx-font-weight: bold;" text="Тип трубы">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label style="-fx-font-weight: bold;" text="Коеф. шероховат" GridPane.rowIndex="3">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </GridPane>
+                  <GridPane prefHeight="301.0" prefWidth="250.0" GridPane.columnIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label style="-fx-font-weight: bold;" text="Внутренний диаметр">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <ChoiceBox fx:id="diameterBox" prefHeight="25.0" prefWidth="179.0">
+                           <GridPane.margin>
+                              <Insets left="150.0" right="10.0" />
+                           </GridPane.margin>
+                        </ChoiceBox>
+                        <TextField fx:id="outerDiamTxt" alignment="CENTER" disable="true" editable="false" style="-fx-border-color: orange; -fx-font-weight: bold; -fx-opacity: 0.8;" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="150.0" right="10.0" top="30.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label prefHeight="66.0" prefWidth="117.0" style="-fx-font-weight: bold;" text="Наружный диаметр х толщину стенки" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <GridPane prefHeight="100.0" prefWidth="519.0" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label style="-fx-font-weight: bold;" text="Скорость (м/с)">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label style="-fx-font-weight: bold;" text="Потери давления (Па/м)" wrapText="true" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="speedTxt" alignment="CENTER" disable="true" prefHeight="25.0" prefWidth="90.0" style="-fx-border-color: red; -fx-font-weight: bold; -fx-font-size: 14; -fx-opacity: 0.8;">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="150.0" right="10.0" top="5.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </TextField>
+                  <TextField fx:id="dropTxt" alignment="CENTER" disable="true" prefHeight="25.0" prefWidth="90.0" style="-fx-border-color: red; -fx-font-weight: bold; -fx-font-size: 14; -fx-opacity: 0.8;" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="160.0" right="10.0" top="5.0" />
+                     </GridPane.margin>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </TextField>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="68.0" prefWidth="270.0" text="Максимальная скорость воды:  1.5 м/с - Ду40&lt;  ; 1 м/с  - Ду32, 0.8 м/с - Ду 20&gt; .  Минимальная - 0,2-0,3 м/с" wrapText="true" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label prefHeight="66.0" prefWidth="276.0" text="Максимальные потери: топочная - 250 Па/м, система отопления - 120 Па/м" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+            <Button mnemonicParsing="false" onAction="#calculate" text="Показать результат" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="350.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
